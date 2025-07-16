@@ -52,7 +52,7 @@ https://<IP_DE_TU_MAQUINA>/app/login
 
 > 💡 Puedes hacerlo desde tu máquina host.
 
-![imagen 1](assets/wazuh-login.png)
+![image 1](https://raw.githubusercontent.com/breatheco-de/wazuh-configuration-as-edr/main/assets/wazuh-login.png)
 
 6. Finalmente logueate en la interfaz de wazuh con las credenciales proporcionadas por la documentación.
 
@@ -72,11 +72,11 @@ Los agentes en Wazuh son un software que se instala en endpoints, como servidore
 
 1. En la opción `server management > endpoints summary` agregas un nuevo agente. Tendrás una vista como esta.
 
-![imagen 2](./assets/deploy-agents.png)
+![image 2](https://raw.githubusercontent.com/breatheco-de/wazuh-configuration-as-edr/main/assets/deploy-agents.png)
 
 2. Selecciona el sistema operativo del endpoint que quieres agregar, su arquitectura, la dirección IP del servidor wazuh que creamos anteriormente y una etiqueta/nombre de ese endpoint. Una vez hecho esto, te va generar un comando para que lo ejecutes en el endpoint (en nuestro caso la maquina linux)
 
-![imagen 3](assets/command-install-wazuh-agent.png)
+![image 3](https://raw.githubusercontent.com/breatheco-de/wazuh-configuration-as-edr/main/assets/command-install-wazuh-agent.png)
 
 3. Una vez que hayas pegado el comando generado por wazuh y se haya realizado la instalación debemos correr los siguientes comandos en la misma maquina endpoint:
 
@@ -87,9 +87,7 @@ sudo systemctl start wazuh-agent
 ```
 Si todo sale bien, haz click en cerrar y busca en el panel, los agentes activos. Tendras una vista como esta.
 
-![imagen 4](./assets/active-agent.png)
-
-
+![image 4](https://raw.githubusercontent.com/breatheco-de/wazuh-configuration-as-edr/main/assets/active-agent.png)
 
 ## Monitorear la actividad en el Wazuh Dashboard
 
@@ -129,7 +127,7 @@ Para monitorear cambios y eventos en el dashboard de Wazuh utilizando la funcion
 
 Después de realizar estas acciones, puedes revisar el dashboard de Wazuh en la opción `Threat Hunting` del endpoint especifico. Verás algo asi:
 
-![imagen 5](./assets/monitoring-events.png)
+![image 5](https://raw.githubusercontent.com/breatheco-de/wazuh-configuration-as-edr/main/assets/monitoring-events.png)
 
 
 > ⚠ El panel de Wazuh se actualiza automáticamente cada 15 minutos. Si no ves reflejados los cambios inmediatamente, espera hasta la próxima actualización automática. Si después de 15 minutos no ves los cambios reflejados, revisa los logs del agente para asegurarte de que no haya errores en la configuración o en la conexión al servidor.
